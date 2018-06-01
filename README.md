@@ -46,4 +46,6 @@ $python core.py -t https://targetsite -r tool1 tool2 .. tooln </br>
 If you want to run **all** the added tools then give '-r *e*':</br>
 $python core.py -t https://targetsite -r e  </br>
 
-If you still need help , watch this video: https://github.com/Pushpamk/manTool/tree/master/test
+If you still need help , watch this video:  
+
+<video src="https://github.com/Pushpamk/manTool/blob/master/test/guide.mp4" poster='https://github.com/Pushpamk/manTool/blob/master/test/guide.mp4' width="320" height="200" controls preload></video>
