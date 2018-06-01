@@ -12,9 +12,8 @@ Are you pentester? So you use many tools again and again? Here is the solution, 
 
 Installation
 --
-$git clone https://github.com/Pushpamk/manTool.git  
-$pip install -r requirements.txt
-
+**$git clone https://github.com/Pushpamk/manTool.git  
+$pip install -r requirements.txt**
 Usage
 -- 
 Add your Tool:</br>
@@ -23,7 +22,7 @@ $python core.py -a 2</br>
 
 Now give toolname , **absolute path** of the tool directory and command so that your tool can execut. If the tool accept target website then write **target** in place of the website you want your tool to execute. eg: </br> 
 $python core.py -a 2</br>
-$[+] Enter Tool Name of 1 Tool  
+**$[+] Enter Tool Name of 1 Tool  
 $sublister  
 $[+] Enter Tool path  
 $absolute path  
@@ -34,19 +33,18 @@ $dirsearch
 $[+] Enter Tool path  
 $/root/.../  
 $[+] How you want to execute  
-$./dirsearch -u target -e *  
-
+$./dirsearch -u target -e * </br>** 
 
 Provide your target website using -t option:</br>
-$python core.py -t https://targetsite</br>
+**$python core.py -t https://targetsite</br>**
 
 You can run tools of **your choice** with -r option:</br>
-$python core.py -t https://targetsite -r tool1 tool2 .. tooln </br> 
+**$python core.py -t https://targetsite -r tool1 tool2 .. tooln </br>**
 
 If you want to run **all** the added tools then give '-r *e*':</br>
-$python core.py -t https://targetsite -r e  </br>
+**$python core.py -t https://targetsite -r e  </br>**
 
-If you still need help , watch this video:  
+If you still need help , watch this video(video might be slow):  
 
 ![guide](https://user-images.githubusercontent.com/25183920/40865111-6d49885c-6614-11e8-908c-4da7d713409a.gif)
 
