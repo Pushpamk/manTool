@@ -2,7 +2,7 @@ manTool [![python](https://img.shields.io/badge/Python-2.7-brightgreen.svg?style
 ==
 This is basic tool which can be used to automate your pentesting.
 --
-Are you hacker? So you use many tools again and again? Here is the solution, you can add as many tools as you can and run with just one command.  
+Are you pentester? So you use many tools again and again? Here is the solution, you can add as many tools as you can and run with just one command.  
 
 					                      _____            _ 
 					 _ __ ___   __ _ _ __/__   \___   ___ | |
