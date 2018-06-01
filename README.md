@@ -6,22 +6,24 @@ Are you hacker? So you use many tools again and again? Here is the solution, you
 
 Installation
 --
-git clone https://github.com/Pushpamk/manTool.git  
-pip install -r requirements.txt
+$git clone https://github.com/Pushpamk/manTool.git  
+$pip install -r requirements.txt
 
 Usage
 -- 
 Add your Tool:</br>
 $python core.py -a Toolname</br>
 
-Now add *absolute path* of the tool directory and command so that your tool can execut. If the tool accept target website then write *target* in place of the website you want your tool to execute. eg: </br> 
+Now add **absolute path** of the tool directory and command so that your tool can execut. If the tool accept target website then write **target** in place of the website you want your tool to execute. eg: </br> 
 $python dirsearch.py -u target </br> 
 
-Provide your target website using -t option:</br>  
+Provide your target website using -t option:</br>
 $python core.py -t https://targetsite</br>
 
-You can run tools of *your choice* with -r option:</br>
+You can run tools of **your choice** with -r option:</br>
 $python core.py -t https://targetsite -r tool1 tool2 .. tooln </br> 
 
-If you want to run 8all* the added tools then give '-r *e*':</br>
+If you want to run **all** the added tools then give '-r *e*':</br>
 $python core.py -t https://targetsite -r e  </br>
+
+If you still need help , watch this video: https://github.com/Pushpamk/manTool/tree/master/test
