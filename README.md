@@ -4,11 +4,12 @@ This is basic tool which can be used to automate your pentesting.
 --
 Are you hacker? So you use many tools again and again? Here is the solution, you can add as many tools as you can and run with just one command.  
 
-	  **                      _____            _ 
+		                      _____            _ 
 		 _ __ ___   __ _ _ __/__   \___   ___ | |
 		| '_ ` _ \ / _` | '_ \ / /\/ _ \ / _ \| |
 		| | | | | | (_| | | | / / | (_) | (_) | |
-		|_| |_| |_|\__,_|_| |_\/   \___/ \___/|_| **
+		|_| |_| |_|\__,_|_| |_\/   \___/ \___/|_|
+
 Installation
 --
 $git clone https://github.com/Pushpamk/manTool.git  
