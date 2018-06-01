@@ -48,4 +48,4 @@ $python core.py -t https://targetsite -r e  </br>
 
 If you still need help , watch this video:  
 
-<video src="https://github.com/Pushpamk/manTool/blob/master/test/guide.mp4" poster='https://github.com/Pushpamk/manTool/blob/master/test/guide.mp4' width="320" height="200" controls preload></video>
+![guide](https://user-images.githubusercontent.com/25183920/40865041-0776df02-6614-11e8-9c31-418ef4ea5eb1.png)
