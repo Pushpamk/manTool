@@ -3,9 +3,13 @@ import sys
 import argparse
 import re
 
-print('''
-LOGO
-	''')
+print('''\033[1;32m
+		                      _____            _ 
+		 _ __ ___   __ _ _ __/__   \___   ___ | |
+		| '_ ` _ \ / _` | '_ \ / /\/ _ \ / _ \| |
+		| | | | | | (_| | | | / / | (_) | (_) | |
+		|_| |_| |_|\__,_|_| |_\/   \___/ \___/|_|             
+\033[1;m	''')
 
 class Tool(object):
 	def __init__(self,toolname,toolpath,options):
@@ -14,7 +18,7 @@ class Tool(object):
 		self.options=options
 		try:
 			with open('.setting.txt','a') as sett_file:
-				sett_file.write('\n'+toolname+' \n\tpath: '+toolname+'.'+toolpath+'\n\tcommand: '+toolname+'.'+options)
+				sett_file.write('\nTool: '+toolname+' \n\tpath: '+toolname+'.'+toolpath+'\n\tcommand: '+toolname+'.'+options)
 		except IOError:
 			print('IOError: Did you delete setting.txt file?')
 
@@ -67,27 +71,44 @@ def execute(pathname,command,tname):
 		
 if __name__ == "__main__":
 	parse=argparse.ArgumentParser()
-	parse.add_argument('-a','--add',help='Add new Tool(eg. python core.py -a Toolname)')
-	parse.add_argument('-t','--target',help='yor target website')
+	parse.add_argument('-a','--add',type=int,help='Add new Tool(eg. python core.py -a Toolname)')
+	parse.add_argument('-t','--target',help='your target website')
 	parse.add_argument('-r','--run',nargs='*',type=str,help='Type the name of tools you want to run')
 	args=parse.parse_args()
 
-	if len(sys.argv) <=1:
-		parse.print_help()
-		sys.exit(0)
 	if args.add and (args.target or args.run):
 		print('\033[1;31mEither Run Tools or Add Tools\033[1;m')
 	elif args.add :
-		toolname=args.add
-		print('\033[1;32mEnter Tool path\033[1;m')
-		toolpath=raw_input()
-		print('\033[1;32mHow you want to execute\033[1;32m')
-		options=raw_input()
-		Tool(toolname,toolpath,options)
-	elif args.run:
-		y=[str(item) for item in args.run]
-		check(y,args.target)
-
+		num=args.add
+		for i in range(0,num):
+			print('\033[1;36m[+] Enter Tool Name of '+str(i+1)+' Tool\033[1;m')
+			toolname=raw_input()
+			print('\033[1;36m[+] Enter Tool path\033[1;m')
+			toolpath=raw_input()
+			print('\033[1;36m[+] How you want to execute\033[1;m')
+			options=raw_input()
+			Tool(toolname,toolpath,options)
+	elif args.target and args.run:
+		if args.run[0] is 'e':
+			
+			try:
+				toollist=[]
+				with open('.setting.txt','r') as searchfile:
+					for line in searchfile.readlines():
+						tool=re.search('Tool: ', line, re.M|re.I)
+						if tool:
+							tool=re.sub('\n|Tool: ','',line)
+							toollist.append(tool.strip())
+			except:
+				print('Soryy boss')
+			y=[str(item) for item in toollist]	
+			check(y,args.target)
+		else:
+			y=[str(item) for item in args.run]
+			check(y,args.target)
+	else:
+		parse.print_help()
+		sys.exit(0)
 
 		
 
