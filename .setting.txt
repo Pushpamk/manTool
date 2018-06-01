@@ -1,7 +1,1 @@
 All your Tools setting is here
-nmap 
-	path: nmap.~/Desktop/
-	command: nmap.nmap -Pn target
-dirsearch 
-	path: new.~/Desktop/H1/Tools/dirsearch/
-	command: new../dirsearch.py -u https://target/ -e *
