@@ -48,4 +48,5 @@ $python core.py -t https://targetsite -r e  </br>
 
 If you still need help , watch this video:  
 
-![guide](https://user-images.githubusercontent.com/25183920/40865041-0776df02-6614-11e8-9c31-418ef4ea5eb1.png)
+![guide](https://user-images.githubusercontent.com/25183920/40865111-6d49885c-6614-11e8-908c-4da7d713409a.gif)
+
