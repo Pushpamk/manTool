@@ -12,10 +12,24 @@ $pip install -r requirements.txt
 Usage
 -- 
 Add your Tool:</br>
-$python core.py -a Toolname</br>
+-a options accept number of tools you want to enter</br>
+$python core.py -a 2</br>
 
-Now add **absolute path** of the tool directory and command so that your tool can execut. If the tool accept target website then write **target** in place of the website you want your tool to execute. eg: </br> 
-$python dirsearch.py -u target </br> 
+Now give toolname , **absolute path** of the tool directory and command so that your tool can execut. If the tool accept target website then write **target** in place of the website you want your tool to execute. eg: </br> 
+$python core.py -a 2</br>
+$[+] Enter Tool Name of 1 Tool  
+$sublister  
+$[+] Enter Tool path  
+$absolute path  
+$[+] How you want to execute  
+$./sublist3r.py -d target  
+$[+] Enter Tool Name of 2 Tool  
+$dirsearch  
+$[+] Enter Tool path  
+$/root/.../  
+$[+] How you want to execute  
+$./dirsearch -u target -e *  
+
 
 Provide your target website using -t option:</br>
 $python core.py -t https://targetsite</br>
