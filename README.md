@@ -14,14 +14,15 @@ Installation
 --
 **$git clone https://github.com/Pushpamk/manTool.git  
 $pip install -r requirements.txt**
+
 Usage
 -- 
 Add your Tool:</br>
 -a options accept number of tools you want to enter</br>
-$python core.py -a 2</br>
+**$python core.py -a 2</br>**
 
 Now give toolname , **absolute path** of the tool directory and command so that your tool can execut. If the tool accept target website then write **target** in place of the website you want your tool to execute. eg: </br> 
-$python core.py -a 2</br>
+**$python core.py -a 2</br>**
 **$[+] Enter Tool Name of 1 Tool  
 $sublister  
 $[+] Enter Tool path  
