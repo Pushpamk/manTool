@@ -109,13 +109,3 @@ if __name__ == "__main__":
 	else:
 		parse.print_help()
 		sys.exit(0)
-
-		
-
-
-
-
-		
-
-
-
