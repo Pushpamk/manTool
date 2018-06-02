@@ -45,7 +45,13 @@ You can run tools of **your choice** with -r option:</br>
 If you want to run **all** the added tools then give '-r *e*':</br>
 **$python core.py -t https://targetsite -r e  </br>**
 
+If you want to edit added tool then give '-e *toolname*':</br>
+**$python core.py -e lol**
+
+If you want to delete added tool then use -d **toolname**
+**$python core.py -d toolname**
+
 If you still need help , watch this video(video might be slow):  
 
-![guide](https://user-images.githubusercontent.com/25183920/40865111-6d49885c-6614-11e8-908c-4da7d713409a.gif)
+![guide](https://asciinema.org/a/20GjZQ5jOnJxDJxc5Y79HSuxz)
 
