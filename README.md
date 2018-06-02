@@ -48,7 +48,7 @@ If you want to run **all** the added tools then give '-r *e*':</br>
 If you want to edit added tool then give '-e *toolname*':</br>
 **$python core.py -e lol**
 
-If you want to delete added tool then use -d **toolname**
+If you want to delete added tool then use -d **toolname**  
 **$python core.py -d toolname**
 
 If you still need help , watch this video:  
