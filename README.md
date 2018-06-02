@@ -15,15 +15,15 @@ Installation
 **$git clone https://github.com/Pushpamk/manTool.git  
 $pip install -r requirements.txt**
 
+Demo Video
+--
+[![guide](https://user-images.githubusercontent.com/25183920/40880741-f47ece4e-66d3-11e8-9615-44e3cef9b96c.png)](https://asciinema.org/a/20GjZQ5jOnJxDJxc5Y79HSuxz)
+
 Usage
 -- 
 Add your Tool:</br>
 -a options accept number of tools you want to enter</br>
 **$python core.py -a 2</br>**
-
-Demo Video
---
-[![guide](https://user-images.githubusercontent.com/25183920/40880741-f47ece4e-66d3-11e8-9615-44e3cef9b96c.png)](https://asciinema.org/a/20GjZQ5jOnJxDJxc5Y79HSuxz)
 
 Now give toolname , **absolute path** of the tool directory and command so that your tool can execut. If the tool accept target website then write **target** in place of the website you want your tool to execute. eg: </br> 
 **$python core.py -a 2</br>**
