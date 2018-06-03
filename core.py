@@ -161,6 +161,18 @@ def add(num):
 		Tool(toolname,toolpath,toolcommand)
 	print('\033[1;32m[+] Added\033[1;m')
 
+def listt():
+	try:
+		with open('.setting.txt','r') as searchfile:
+			for line in searchfile.readlines():
+				toolname=re.search('Tool: ', line, re.M|re.I)
+				if toolname:
+					tool=toolname.group()
+					tool=re.sub('Tool: ','',line).strip()
+					print('\033[1;36m'+str(tool)+'\033[1;m')
+	except IOError:
+		print('\033[1;31m[-] IOError: while listing\033[1;m')
+
 if __name__ == "__main__":
 	parse=argparse.ArgumentParser()
 	parse.add_argument('-a','--add',type=int,help='Add new Tool(eg. python core.py -a Toolname)')
@@ -168,8 +180,9 @@ if __name__ == "__main__":
 	parse.add_argument('-r','--run',nargs='*',type=str,help='Type the name of tools you want to run')
 	parse.add_argument('-d','--delete',nargs='*',type=str,help='Delete your saved tool')
 	parse.add_argument('-e','--edit',nargs='*',type=str,help='Edit your saved tool')
+	parse.add_argument('--list', action='store_true',help='List of added tools')
 	args=parse.parse_args()
-
+	
 	if args.add and (args.target or args.run):
 		print('\033[1;31m[-] Either Run Tools or Add Tools\033[1;m')
 	
@@ -201,7 +214,8 @@ if __name__ == "__main__":
 	elif args.edit:
 		y=[str(item) for item in args.edit]
 		edit(y)
-
+	elif args.list:
+		listt()
 	else:
 		parse.print_help()
 		sys.exit(0)

@@ -54,3 +54,6 @@ If you want to edit added tool then give '-e *toolname*':</br>
 
 If you want to delete added tool then use -d **toolname**  
 **$python core.py -d toolname**
+
+List all the added tool with **--list**
+**$python core.py --list**
