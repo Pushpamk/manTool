@@ -80,7 +80,7 @@ def delete(deltoollist):
 							new.write(line)
 			os.remove('.setting.txt')
 			os.rename('new.txt','.setting.txt')
-			print('\033[1;31m[-] Deleted')
+			print('\033[1;31m[-] Deleted\033[1;m')
 	except IOError:
 		print('\033[1;31m[-] IOError: while deleting tool '+deltool+'\033[1;m')
 		
@@ -116,29 +116,24 @@ def edit(edittoollist):
 				if toolname:
 					too=[]
 					too.append(tool)
-					print('\033[1;33m[?] What you want to edit Path or command or both p/c/b\033[1;m'+'\033[1;40m')
-					char=raw_input()
+					char=raw_input('\033[1;33m[?] What you want to edit Path or command or both p/c/b\033[1;m'+'\033[1;40m: ')
 					if char == 'p' or char == 'P':
 						print('\033[1;31m[-]'+toolpath.strip()+'\033[1;m')
-						print('\033[1;36m[+] Enter new path\033[1;m'+'\033[1;40m')
-						newp=raw_input()
+						newp=raw_input('\033[1;36m[+] Enter new path\033[1;m'+'\033[1;40m: ')
 						delete(too)
 						Tool(tool,str(newp),toolcommand)
 						print('\033[1;32m[+] Updated \033[1;m')
 					elif char == 'c' or char == 'C':
 						print('\033[1;31m[-]'+toolcommand.strip()+'\033[1;m')
-						print('\033[1;36m[+] Enter new command\033[1;m'+'\033[1;40m')
-						newc=raw_input()
+						newc=raw_input('\033[1;36m[+] Enter new command\033[1;m'+'\033[1;40m: ')
 						delete(too)
 						Tool(tool,toolpath,str(newc))
 						print('\033[1;32m[+] Updated \033[1;m')
 					elif char == 'b' or char == 'B':
 						print('\033[1;31m[-]'+toolpath.strip()+'\033[1;m')
-						print('\033[1;36m[+] Enter new path\033[1;m'+'\033[1;40m')
-						newp=raw_input()
+						newp=raw_input('\033[1;36m[+] Enter new path\033[1;m'+'\033[1;40m: ')
 						print('\033[1;31m[-]'+toolcommand.strip()+'\033[1;m')
-						print('\033[1;36m[+] Enter new command\033[1;m'+'\033[1;40m')
-						newc=raw_input()
+						newc=raw_input('\033[1;36m[+] Enter new command\033[1;m'+'\033[1;40m: ')
 						delete(too)
 						Tool(tool,str(newp),str(newc))
 						print('\033[1;32m[+] Updated \033[1;m')
@@ -152,12 +147,9 @@ def edit(edittoollist):
 
 def add(num):
 	for i in range(0,num):
-		print('\033[1;36m[+] Enter Tool Name of '+str(i+1)+' Tool\033[1;m'+'\033[1;40m')
-		toolname=raw_input()
-		print('\033[1;36m[+] Enter Tool path\033[1;m'+'\033[1;40m')
-		toolpath=raw_input()
-		print('\033[1;36m[+] How you want to execute\033[1;m'+'\033[1;40m')
-		toolcommand=raw_input()
+		toolname=raw_input('\033[1;36m[+] Enter Tool Name of '+str(i+1)+' Tool\033[1;m'+'\033[1;40m: ')
+		toolpath=raw_input('\033[1;36m[+] Enter Tool path\033[1;m'+'\033[1;40m: ')
+		toolcommand=raw_input('\033[1;36m[+] How you want to execute\033[1;m'+'\033[1;40m: ')
 		Tool(toolname,toolpath,toolcommand)
 	print('\033[1;32m[+] Added\033[1;m')
 
