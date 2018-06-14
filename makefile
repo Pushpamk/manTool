@@ -9,4 +9,5 @@ install:
 
 uninstall:
 	@sudo rm -f $(DESTDIR)/mantool
+	@sudo rm -f ~/.setting.txt
 	@echo "mantool has been removed"

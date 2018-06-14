@@ -18,14 +18,14 @@ class Tool(object):
 		self.toolpath=toolpath
 		self.options=options
 		try:
-			with open('~/.setting.txt','a') as sett_file:
+			with open('/root/.setting.txt','a') as sett_file:
 				sett_file.write('\nTool: '+toolname+' \n\tpath: '+toolname+'.'+toolpath+'\n\tcommand: '+toolname+'.'+options)
 		except IOError:
-			print('\033[1;31m[-] IOError: Did you delete ~/.setting.txt file?\033[1;m')
+			print('\033[1;31m[-] IOError: Did you delete /root/.setting.txt file?\033[1;m')
 
 def check(toollist,target):		
 	try:
-		with open('~/.setting.txt','r') as searchfile:
+		with open('/root/.setting.txt','r') as searchfile:
 			for tool in toollist:
 				for line in searchfile.readlines():
 					toolname = re.search(tool, line)
@@ -56,7 +56,7 @@ def check(toollist,target):
 					command=re.sub('\n|'+command+'.','',commandline).lstrip()
 					execute(path,command,tool)
 	except IOError:
-		print('\033[1;31m[-] IOError: while searching for tool in ~/.setting.txt file\033[1;m')
+		print('\033[1;31m[-] IOError: while searching for tool in /root/.setting.txt file\033[1;m')
 
 def execute(pathname,command,tname):
 	if pathname is not 'None' and command is not 'None':
@@ -64,30 +64,30 @@ def execute(pathname,command,tname):
 		try:
 			os.system('cd '+pathname+' && '+command)
 		except:
-			print('\033[1;31m[-] Please check your toolpath and command in ~/.setting.txt file\033[1;m')
+			print('\033[1;31m[-] Please check your toolpath and command in /root/.setting.txt file\033[1;m')
 	else:
 		print('\033[1;31m[-] Not able to run'+tname+'\033[1;m')
-		print('\033[1;31m[-] please check pathname and command in ~/.setting.txt file\033[1;m')
+		print('\033[1;31m[-] please check pathname and command in /root/.setting.txt file\033[1;m')
 
 def delete(deltoollist):
 	try:
 		x=len(deltoollist)
 		for deltool in deltoollist:
-			with open('~/.setting.txt','r') as file:
+			with open('/root/.setting.txt','r') as file:
 				with open('new.txt','wb') as new:
 					for line in file.readlines():
 						deletetool=re.search(deltool, line)
 						if not deletetool:
 							new.write(line)
-			os.remove('~/.setting.txt')
-			os.rename('new.txt','~/.setting.txt')
+			os.remove('/root/.setting.txt')
+			os.rename('new.txt','/root/.setting.txt')
 			print('\033[1;31m[-] Deleted\033[1;m')
 	except IOError:
 		print('\033[1;31m[-] IOError: while deleting tool '+deltool+'\033[1;m')
 		
 def edit(edittoollist):
 	try:
-		with open('~/.setting.txt','r') as searchfile:
+		with open('/root/.setting.txt','r') as searchfile:
 			for tool in edittoollist:
 				toolname=False
 				for line in searchfile.readlines():
@@ -117,24 +117,24 @@ def edit(edittoollist):
 				if toolname:
 					too=[]
 					too.append(tool)
-					char=raw_input('\033[1;33m[?] What you want to edit Path or command or both p/c/b\033[1;m'+'\033[1;40m: ')
+					char=raw_input('\033[1;33m[?] What you want to edit Path or command or both p/c/b\033[1;m: ')
 					if char == 'p' or char == 'P':
 						print('\033[1;31m[-]'+toolpath.strip()+'\033[1;m')
-						newp=raw_input('\033[1;36m[+] Enter new path\033[1;m'+'\033[1;40m: ')
+						newp=raw_input('\033[1;36m[+] Enter new path\033[1;m: ')
 						delete(too)
 						Tool(tool,str(newp),toolcommand)
 						print('\033[1;32m[+] Updated \033[1;m')
 					elif char == 'c' or char == 'C':
 						print('\033[1;31m[-]'+toolcommand.strip()+'\033[1;m')
-						newc=raw_input('\033[1;36m[+] Enter new command\033[1;m'+'\033[1;40m: ')
+						newc=raw_input('\033[1;36m[+] Enter new command\033[1;m: ')
 						delete(too)
 						Tool(tool,toolpath,str(newc))
 						print('\033[1;32m[+] Updated \033[1;m')
 					elif char == 'b' or char == 'B':
 						print('\033[1;31m[-]'+toolpath.strip()+'\033[1;m')
-						newp=raw_input('\033[1;36m[+] Enter new path\033[1;m'+'\033[1;40m: ')
+						newp=raw_input('\033[1;36m[+] Enter new path\033[1;m: ')
 						print('\033[1;31m[-]'+toolcommand.strip()+'\033[1;m')
-						newc=raw_input('\033[1;36m[+] Enter new command\033[1;m'+'\033[1;40m: ')
+						newc=raw_input('\033[1;36m[+] Enter new command\033[1;m: ')
 						delete(too)
 						Tool(tool,str(newp),str(newc))
 						print('\033[1;32m[+] Updated \033[1;m')
@@ -143,20 +143,20 @@ def edit(edittoollist):
 				else:
 					print('\033[1;31m[-] Tool name not found\033[1;m')
 	except IOError:
-		print('\033[1;31m[-] IOError: while editing for tool in ~/.setting.txt file\033[1;m')
+		print('\033[1;31m[-] IOError: while editing for tool in /root/.setting.txt file\033[1;m')
 
 
 def add(num):
 	for i in range(0,num):
-		toolname=raw_input('\033[1;36m[+] Enter Tool Name of '+str(i+1)+' Tool\033[1;m'+'\033[1;40m: ')
-		toolpath=raw_input('\033[1;36m[+] Enter Tool path\033[1;m'+'\033[1;40m: ')
-		toolcommand=raw_input('\033[1;36m[+] How you want to execute\033[1;m'+'\033[1;40m: ')
+		toolname=raw_input('\033[1;36m[+] Enter Tool Name of '+str(i+1)+' Tool\033[1;m: ')
+		toolpath=raw_input('\033[1;36m[+] Enter Tool path\033[1;m: ')
+		toolcommand=raw_input('\033[1;36m[+] How you want to execute\033[1;m: ')
 		Tool(toolname,toolpath,toolcommand)
 	print('\033[1;32m[+] Added\033[1;m')
 
 def listt():
 	try:
-		with open('~/.setting.txt','r') as searchfile:
+		with open('/root/.setting.txt','r') as searchfile:
 			for line in searchfile.readlines():
 				toolname=re.search('Tool: ', line, re.M|re.I)
 				if toolname:
@@ -188,7 +188,7 @@ if __name__ == "__main__":
 		if args.run[0] is 'e' and len(args.run)==1:
 			try:
 				toollist=[]
-				with open('~/.setting.txt','r') as searchfile:
+				with open('/root/.setting.txt','r') as searchfile:
 					for line in searchfile.readlines():
 						tool=re.search('Tool: ', line, re.M|re.I)
 						if tool:
