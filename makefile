@@ -1,4 +1,4 @@
-DESTDIR ?= /usr/local/bin
+DESTDIR ?= /usr/bin
 
 install:
 	@sudo pip install -r requirements.txt
