@@ -9,7 +9,8 @@ print('''\033[1;32m		                      _____            _
 		| '_ ` _ \ / _` | '_ \ / /\/ _ \ / _ \| |
 		| | | | | | (_| | | | / / | (_) | (_) | |
 		|_| |_| |_|\__,_|_| |_\/   \___/ \___/|_|\033[1;31mv1.0\033[1;m
-			\033[1;36mmade by Pushpam kumar\033[1;m \033[1;41m@00pushpam	\033[1;m\n''')
+			\033[1;36mmade by Pushpam kumar\033[1;m \033[1;41m@00pushpam\033[0m
+			''')
 
 class Tool(object):
 	def __init__(self,toolname,toolpath,options):
@@ -167,7 +168,7 @@ def listt():
 
 if __name__ == "__main__":
 	parse=argparse.ArgumentParser()
-	parse.add_argument('-a','--add',type=int,help='Add new Tool(eg. python core.py -a Toolname)')
+	parse.add_argument('-a','--add',type=int,help='Add new Tool(eg. mantool -a Toolname)')
 	parse.add_argument('-t','--target',help='your target website')
 	parse.add_argument('-r','--run',nargs='*',type=str,help='Type the name of tools you want to run')
 	parse.add_argument('-d','--delete',nargs='*',type=str,help='Delete your saved tool')
