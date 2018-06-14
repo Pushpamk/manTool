@@ -17,7 +17,7 @@ $make install**
 
 Demo Video
 --
-[![guide](https://user-images.githubusercontent.com/25183920/40880741-f47ece4e-66d3-11e8-9615-44e3cef9b96c.png)](https://asciinema.org/a/s7cSlmA3P8KQbYB7KGBhpH3Ro)
+[![guide](https://user-images.githubusercontent.com/25183920/41409139-c8d583f0-6ff2-11e8-9746-6b20ab2d97a0.png)](https://asciinema.org/a/NF7o64lTuksgLuR6rRTQP2raI)
 
 Usage
 -- 
