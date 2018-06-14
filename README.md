@@ -8,7 +8,8 @@ Are you pentester? So you use many tools again and again? Here is the solution, 
 					 _ __ ___   __ _ _ __/__   \___   ___ | |
 					| '_ ` _ \ / _` | '_ \ / /\/ _ \ / _ \| |
 					| | | | | | (_| | | | / / | (_) | (_) | |
-					|_| |_| |_|\__,_|_| |_\/   \___/ \___/|_|
+					|_| |_| |_|\__,_|_| |_\/   \___/ \___/|_|v1.0
+						made by Pushpam kumar @00pushpam
 
 Installation
 --
