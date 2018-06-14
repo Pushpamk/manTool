@@ -13,7 +13,8 @@ Are you pentester? So you use many tools again and again? Here is the solution, 
 
 Installation
 --
-**$git clone https://github.com/Pushpamk/manTool.git **  
+**$git clone https://github.com/Pushpamk/manTool.git  
+cd manTool/
 $make install**
 
 Demo Video
