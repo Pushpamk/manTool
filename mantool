@@ -4,13 +4,12 @@ import sys
 import argparse
 import re
 
-print('''\033[1;32m
-		                      _____            _ 
+print('''\033[1;32m		                      _____            _ 
 		 _ __ ___   __ _ _ __/__   \___   ___ | |
 		| '_ ` _ \ / _` | '_ \ / /\/ _ \ / _ \| |
 		| | | | | | (_| | | | / / | (_) | (_) | |
-		|_| |_| |_|\__,_|_| |_\/   \___/ \___/|_|             
-\033[1;m	''')
+		|_| |_| |_|\__,_|_| |_\/   \___/ \___/|_|\033[1;31mv1.0\033[1;m
+			\033[1;36mmade by Pushpam kumar\033[1;m \033[1;41m@00pushpam	\033[1;m\n''')
 
 class Tool(object):
 	def __init__(self,toolname,toolpath,options):
