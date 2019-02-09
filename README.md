@@ -57,3 +57,5 @@ List all the added tool with **--list**
 Uninstallation
 --
 make uninstall
+--
+Licensed under the [MIT License](LICENSE)
